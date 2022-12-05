@@ -24,6 +24,7 @@ const fallback = <Skeleton height="75vh" width="100%" />
 
 // Pages
 const Home = loadable(() => import('./pages/home'), {fallback})
+const Expenses = loadable(() => import('./pages/expenses'), {fallback})
 const Login = loadable(() => import('./pages/login'), {fallback})
 const Registration = loadable(() => import('./pages/registration'), {fallback})
 const ResetPassword = loadable(() => import('./pages/reset-password'), {fallback})
@@ -97,6 +98,11 @@ const routes = [
     {
         path: '/account/wishlist',
         component: Wishlist
+    },
+    {
+        path: '/expenses',
+        component: Expenses,
+        exact: true
     },
     {
         path: '*',
