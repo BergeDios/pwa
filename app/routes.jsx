@@ -19,6 +19,7 @@ import {getConfig} from 'pwa-kit-runtime/utils/ssr-config'
 // Components
 import {Skeleton} from '@chakra-ui/react'
 import {configureRoutes} from './utils/routes-utils'
+import Seba from './pages/seba'
 
 const fallback = <Skeleton height="75vh" width="100%" />
 
@@ -35,6 +36,7 @@ const LoginRedirect = loadable(() => import('./pages/login-redirect'), {fallback
 const ProductDetail = loadable(() => import('./pages/product-detail'), {fallback})
 const ProductList = loadable(() => import('./pages/product-list'), {fallback})
 const Wishlist = loadable(() => import('./pages/account/wishlist'), {fallback})
+// const Seba = loadable(() => import('./pages/seba'), {fallback})
 const PageNotFound = loadable(() => import('./pages/page-not-found'))
 
 const routes = [
@@ -97,6 +99,10 @@ const routes = [
     {
         path: '/account/wishlist',
         component: Wishlist
+    },
+    {
+        path: '/seba',
+        component: Seba
     },
     {
         path: '*',
