@@ -21,6 +21,7 @@ import {Skeleton} from '@chakra-ui/react'
 import {configureRoutes} from './utils/routes-utils'
 import Seba from './pages/seba'
 import Eliseo from './pages/eliseo'
+import FlorAcq from './floracq'
 
 const fallback = <Skeleton height="75vh" width="100%" />
 
@@ -110,6 +111,11 @@ const routes = [
         path: '/eliseo',
         component: Eliseo
     },
+    {
+        path: '/floracq',
+        component: FlorAcq
+    },
+
     {
         path: '*',
         component: PageNotFound
