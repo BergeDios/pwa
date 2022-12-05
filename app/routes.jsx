@@ -21,6 +21,8 @@ import {Skeleton} from '@chakra-ui/react'
 import {configureRoutes} from './utils/routes-utils'
 import Seba from './pages/seba'
 import Santi from './pages/santi'
+import Eliseo from './pages/eliseo'
+import FlorAcq from './floracq'
 
 const fallback = <Skeleton height="75vh" width="100%" />
 
@@ -38,6 +40,7 @@ const ProductDetail = loadable(() => import('./pages/product-detail'), {fallback
 const ProductList = loadable(() => import('./pages/product-list'), {fallback})
 const Wishlist = loadable(() => import('./pages/account/wishlist'), {fallback})
 // const Seba = loadable(() => import('./pages/seba'), {fallback})
+//const Eliseo = loadable(() => import('.pages/eliseo'), {fallback} )
 const PageNotFound = loadable(() => import('./pages/page-not-found'))
 
 const routes = [
@@ -103,13 +106,21 @@ const routes = [
     },
     {
         path: '/santi',
-        component: Santi,
-        exact: true
+        component: Santi
     },
     {
         path: '/seba',
         component: Seba
     },
+    {
+        path: '/eliseo',
+        component: Eliseo
+    },
+    {
+        path: '/floracq',
+        component: FlorAcq
+    },
+
     {
         path: '*',
         component: PageNotFound
