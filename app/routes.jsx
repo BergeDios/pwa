@@ -19,12 +19,13 @@ import {getConfig} from 'pwa-kit-runtime/utils/ssr-config'
 // Components
 import {Skeleton} from '@chakra-ui/react'
 import {configureRoutes} from './utils/routes-utils'
+import Seba from './pages/seba'
+import Santi from './pages/santi'
 
 const fallback = <Skeleton height="75vh" width="100%" />
 
 // Pages
 const Home = loadable(() => import('./pages/home'), {fallback})
-const Expenses = loadable(() => import('./pages/expenses'), {fallback})
 const Login = loadable(() => import('./pages/login'), {fallback})
 const Registration = loadable(() => import('./pages/registration'), {fallback})
 const ResetPassword = loadable(() => import('./pages/reset-password'), {fallback})
@@ -36,6 +37,7 @@ const LoginRedirect = loadable(() => import('./pages/login-redirect'), {fallback
 const ProductDetail = loadable(() => import('./pages/product-detail'), {fallback})
 const ProductList = loadable(() => import('./pages/product-list'), {fallback})
 const Wishlist = loadable(() => import('./pages/account/wishlist'), {fallback})
+// const Seba = loadable(() => import('./pages/seba'), {fallback})
 const PageNotFound = loadable(() => import('./pages/page-not-found'))
 
 const routes = [
@@ -100,9 +102,13 @@ const routes = [
         component: Wishlist
     },
     {
-        path: '/expenses',
-        component: Expenses,
+        path: '/santi',
+        component: Santi,
         exact: true
+    },
+    {
+        path: '/seba',
+        component: Seba
     },
     {
         path: '*',
