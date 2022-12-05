@@ -22,7 +22,7 @@ import {configureRoutes} from './utils/routes-utils'
 import Seba from './pages/seba'
 import Santi from './pages/santi'
 import Eliseo from './pages/eliseo'
-import FlorAcq from './floracq'
+import FlorAcq from './pages/floracq'
 
 const fallback = <Skeleton height="75vh" width="100%" />
 
