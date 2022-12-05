@@ -4,8 +4,10 @@ import React from 'react'
 const FlorAcq = () => {
     return (
         <Container>
-            <Center>
-                <Button>Botoncito</Button>
+            <Center py="10rem">
+                <Button colorScheme="teal" size="lg">
+                    Botoncito
+                </Button>
             </Center>
         </Container>
     )
